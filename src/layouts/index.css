@@ -1,10 +1,18 @@
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat');*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,300|Orbitron:400,300|Source+Code+Pro:400,300');
+/*
+font-family: 'Orbitron', sans-serif;
+font-family: 'Source Code Pro', monospace;
+*/
 html {
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif !important;
+
 }
 article,
 aside,
@@ -61,6 +69,10 @@ dfn {
 h1 {
   font-size: 2em;
   margin: .67em 0;
+  /*background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+
 }
 mark {
   background-color: #ff0;
@@ -228,8 +240,9 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  /*font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;*/
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -245,8 +258,8 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /*font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;*/
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -618,6 +631,334 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+.photo-container{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  width: 100vw;
+  height: 90vh;
+  padding-top: 10vh;
+  /*background-image: url('./pure-japan.jpeg');*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*background-position: center;*/
+}
+.name-container{
+grid-area: 1 / 2 / 5 / 5;
+}
+.main-name{
+  font-size: 3em;
+  white-space: nowrap;
+  color: #212121;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  cursor: default;
+  margin-bottom: 25px;
+}
+.typer{
+  font-size: 3vw;
+  color: #212121;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 300;
+  cursor: default;
+
+}
+.nav{
+  display: grid;
+  grid-column: 1;
+  height: 10vh;
+  width: 100vw;
+  background: #212121;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  position: fixed;
+
+
+
+
+}
+.nav-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*grid-template-rows: 60% 1fr;*/
+
+}
+.nav-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7vh;
+  text-transform: uppercase;
+  color: #eee;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  border-right: 1px solid #eee;
+  transition: all 0.3s;
+  cursor: pointer;
+
+
+}
+.nav-item:hover{
+  font-size: 2vh;
+  color: royalblue;
+  transition: all 0.3s;
+}
+.nav-item:nth-last-child(1){
+  border:none;
+}
+.about-section{
+  /*width: 100vw;*/
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+.about-section h1{
+  font-size: 2.7em;
+  color: #212121;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  cursor: default;
+  border-bottom: .3px solid #212121;
+}
+.like-container{
+  width: 90vw;
+  height: auto;
+  display: flex;
+  flex:1;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.item{
+width: 250px;
+/*height: 200px;*/
+margin:10px;
+padding: 5px;
+font-family: 'Montserrat';
+letter-spacing: 1px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.item h3{
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 300;
+}
+.about-icons{
+  font-size: 55px;
+}
+.about-lift{
+
+  margin: auto;
+  /*background-image: url('./workout-icon.png');*/
+  background-size: contain;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+}
+.skills-section{
+  width: 100vw;
+  background: black;
+  color:white;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.skills-section h1{
+  font-size: 2.7em;
+  color:white;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  cursor: default;
+  /*border-bottom: .3px solid #212121;*/
+  margin-top:100px;
+}
+.skills-container{
+  display: flex;
+  flex:1;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.skill-column{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  padding-top:25px;
+}
+.skills-icons{
+  font-size: 55px;
+  color: white;
+}
+.skill-column div {
+  cursor: default;
+  border-top: solid white 1px;
+
+  padding-top: 20px;
+  margin-top: 30px;
+  /*text-align: left;*/
+}
+
+.main-top{
+  height: 70vh;
+  width: 100vw;
+}
+.main-name{
+  background-image: linear-gradient(to right, purple,  33%, blue 66%, teal);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;  font-size: 64px;
+  letter-spacing: 13px;
+
+
+}
+.flex-center {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-img{
+  height: 400px;
+}
+.small-font{
+  font-size: 12px;
+  font-style: 'Mont'
+}
+.grey{
+  color: grey;
+}
+.empty-div{
+  width: 100vw;
+  height: 20%;
+}
+.my-button{
+  border-radius: 25px;
+  background: tomato;
+  color: white;
+  height: 80px;
+  width:300px;
+  position: absolute;
+
+}
+.nav-tag{
+  cursor: pointer;
+  transition: all 0.3s;
+
+
+}
+.nav-tag:hover{
+  font-size: 1.5em;
+  color: royalblue;
+  transition: all 0.3s;
+
+
+}
+.project-container{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  background: #eee;
+}
+.my-projects{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.project{
+  height: 300px;
+  width:420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  margin: 10px 0;
+}
+.contact-container{
+  width: 100vw;
+  background: black;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.contact-container h1{
+  margin-top: 25px;
+  color: white;
+}
+
+.social{
+  width: 30%;
+  height: 40%;
+  /*background: yellow;*/
+}
+.social img{
+  cursor:pointer;
+  margin: 0 5px;
+  /*background: yellow;*/
+}
+
+.contact{
+  height:80%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+}
+.contact div{
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+}
+.contact-p{
+  margin: 0px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: white;
+}
+.contact-box{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
@@ -625,13 +966,17 @@ pre tt:after {
 }
 
 .button {
-  font-size: 42px;
+  font-size: 24px;
   background-size:200%;
-  padding:15px;
-   border-radius:5px;
+  padding:25px;
   background-image: linear-gradient(to top left, #D38312 10%, #A83279 100%);
   transition: .3s ease;
   cursor: pointer;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  padding-bottom: 45px;
+
 }
 
 .button a {

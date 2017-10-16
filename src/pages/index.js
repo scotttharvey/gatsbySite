@@ -2,7 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const IndexPage = () => (
-  <div>
+  <div className="main-top">
+
     <h1>Hi Scott</h1>
     <p>I will help you start your project</p>
     <p>Now go build something great.</p>
